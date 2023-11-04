@@ -72,6 +72,13 @@
      DEF(TOK_UINT128, "__uint128_t")
 #endif
 
+/* greek-keywords */
+     DEF(TOK_AKERAIOS, "ακεραιος")
+     DEF(TOK_KENO, "κενο")
+     DEF(TOK_XARAKTHRAS, "χαρακτηρας")
+     DEF(TOK_AN, "αν")
+     DEF(TOK_ALLIVS, "αλλιως")
+
 /*********************************************************************/
 /* the following are not keywords. They are included to ease parsing */
 /* preprocessor only */

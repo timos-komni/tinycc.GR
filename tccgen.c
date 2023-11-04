@@ -4592,6 +4592,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
 
             /* basic types */
         case TOK_CHAR:
+        case TOK_XARAKTHRAS:
             u = VT_BYTE;
         basic_type:
             next();
@@ -4610,12 +4611,14 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             typespec_found = 1;
             break;
         case TOK_VOID:
+        case TOK_KENO:
             u = VT_VOID;
             goto basic_type;
         case TOK_SHORT:
             u = VT_SHORT;
             goto basic_type;
         case TOK_INT:
+        case TOK_AKERAIOS:
             u = VT_INT;
             goto basic_type;
         case TOK_ALIGNAS:
@@ -6941,14 +6944,14 @@ again:
     if (debug_modes)
         tcc_tcov_check_line (tcc_state, 0), tcc_tcov_block_begin (tcc_state);
 
-    if (t == TOK_IF) {
+    if (t == TOK_IF || t == TOK_AN) {
         new_scope_s(&o);
         skip('(');
         gexpr();
         skip(')');
         a = gvtst(1, 0);
         block(0);
-        if (tok == TOK_ELSE) {
+        if (tok == TOK_ELSE || tok == TOK_ALLIVS) {
             d = gjmp(0);
             gsym(a);
             next();

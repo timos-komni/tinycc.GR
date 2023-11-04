@@ -944,9 +944,9 @@ redo_start:
                 next_nomacro();
                 p = file->buf_ptr;
                 if (a == 0 && 
-                    (tok == TOK_ELSE || tok == TOK_ELIF || tok == TOK_ENDIF))
+                    (tok == TOK_ELSE || tok == TOK_ALLIVS || tok == TOK_ELIF || tok == TOK_ENDIF))
                     goto the_end;
-                if (tok == TOK_IF || tok == TOK_IFDEF || tok == TOK_IFNDEF)
+                if (tok == TOK_IF || tok == TOK_AN || tok == TOK_IFDEF || tok == TOK_IFNDEF)
                     a++;
                 else if (tok == TOK_ENDIF)
                     a--;
@@ -1815,6 +1815,7 @@ ST_FUNC void preprocess(int is_bof)
         c = 1;
         goto do_ifdef;
     case TOK_IF:
+    case TOK_AN:
         c = expr_preprocess(s1);
         goto do_if;
     case TOK_IFDEF:
@@ -1840,6 +1841,7 @@ ST_FUNC void preprocess(int is_bof)
             tcc_error("memory full (ifdef)");
         *s1->ifdef_stack_ptr++ = c;
         goto test_skip;
+    case TOK_ALLIVS:
     case TOK_ELSE:
         if (s1->ifdef_stack_ptr == s1->ifdef_stack)
             tcc_error("#else without matching #if");
