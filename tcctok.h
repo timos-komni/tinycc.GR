@@ -73,11 +73,23 @@
 #endif
 
 /* greek-keywords */
-     DEF(TOK_AKERAIOS, "ακεραιος")
-     DEF(TOK_KENO, "κενο")
-     DEF(TOK_XARAKTHRAS, "χαρακτηρας")
-     DEF(TOK_AN, "αν")
-     DEF(TOK_ALLIVS, "αλλιως")
+     DEF(TOK_AKERAIOS, "ακεραιος") //int
+     DEF(TOK_KENO, "κενο") // void
+     DEF(TOK_XARAKTHRAS, "χαρακτηρας") // char
+     DEF(TOK_AN, "αν") // if
+     DEF(TOK_ALLIVS, "αλλιως") // else
+     //DEF(TOK_ENV, "ενω") // while
+     DEF(TOK_DIEKOCE, "διεκοψε") // break
+     DEF(TOK_EPESTRECE, "επεστρεψε") // return
+     DEF(TOK_GIA, "ΓΙΑ") // for
+     //DEF(TOK_EXTERN, "extern") // extern
+     DEF(TOK_STATIKO, "στατικο") // static
+     //DEF(TOK_UNSIGNED, "unsigned") // unsigned
+     //DEF(TOK_GOTO, "goto") // goto
+     DEF(TOK_KANV, "κανε") // do
+     DEF(TOK_SYNEXISE, "συνεχισε") // continue
+     //DEF(TOK_SWITCH, "switch") // switch
+     DEF(TOK_PERIPTVSH, "περιπτωση") // case
 
 /*********************************************************************/
 /* the following are not keywords. They are included to ease parsing */

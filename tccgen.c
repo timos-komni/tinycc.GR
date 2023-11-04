@@ -4750,6 +4750,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             g = VT_EXTERN;
             goto storage;
         case TOK_STATIC:
+        case TOK_STATIKO:
             g = VT_STATIC;
             goto storage;
         case TOK_TYPEDEF:
@@ -4987,6 +4988,7 @@ static int post_type(CType *type, AttributeDef *ad, int storage, int td)
 	    case TOK_CONST1:
 	    case TOK_VOLATILE1:
 	    case TOK_STATIC:
+        case TOK_STATIKO:
 	    case '*':
 		next();
 		continue;
@@ -7010,7 +7012,7 @@ again:
         else if (!nocode_wanted)
             check_func_return();
 
-    } else if (t == TOK_RETURN) {
+    } else if (t == TOK_RETURN || t == TOK_EPESTRECE) {
         b = (func_vt.t & VT_BTYPE) != VT_VOID;
         if (tok != ';') {
             gexpr();
@@ -7036,7 +7038,7 @@ again:
 	    tcc_tcov_block_end (tcc_state, -1);
         CODE_OFF();
 
-    } else if (t == TOK_BREAK) {
+    } else if (t == TOK_BREAK || t == TOK_DIEKOCE) {
         /* compute jump */
         if (!cur_scope->bsym)
             tcc_error("cannot break");
@@ -7047,7 +7049,7 @@ again:
         *cur_scope->bsym = gjmp(*cur_scope->bsym);
         skip(';');
 
-    } else if (t == TOK_CONTINUE) {
+    } else if (t == TOK_CONTINUE || t == TOK_SYNEXISE) {
         /* compute jump */
         if (!cur_scope->csym)
             tcc_error("cannot continue");
@@ -7055,7 +7057,7 @@ again:
         *cur_scope->csym = gjmp(*cur_scope->csym);
         skip(';');
 
-    } else if (t == TOK_FOR) {
+    } else if (t == TOK_FOR || t == TOK_GIA) {
         new_scope(&o);
 
         skip('(');
@@ -7090,7 +7092,7 @@ again:
         gsym(a);
         prev_scope(&o, 0);
 
-    } else if (t == TOK_DO) {
+    } else if (t == TOK_DO || t == TOK_KANV) {
         new_scope_s(&o);
         a = b = 0;
         d = gind();
@@ -7156,7 +7158,7 @@ again:
         cur_switch = sw->prev;
         tcc_free(sw);
 
-    } else if (t == TOK_CASE) {
+    } else if (t == TOK_CASE || t == TOK_PERIPTVSH) {
         struct case_t *cr = tcc_malloc(sizeof(struct case_t));
         if (!cur_switch)
             expect("switch");
