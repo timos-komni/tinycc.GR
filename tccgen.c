@@ -4643,6 +4643,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             }
             continue;
         case TOK_LONG:
+        case TOK_MAKRYS:
             if ((t & VT_BTYPE) == VT_DOUBLE) {
                 t = (t & ~(VT_BTYPE|VT_LONG)) | VT_LDOUBLE;
             } else if ((t & (VT_BTYPE|VT_LONG)) == VT_LONG) {
@@ -4722,6 +4723,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             next();
             break;
         case TOK_SIGNED1:
+        case TOK_PROSHMASMENOS1:
         case TOK_SIGNED2:
         case TOK_SIGNED3:
             if ((t & (VT_DEFSIGN|VT_UNSIGNED)) == (VT_DEFSIGN|VT_UNSIGNED))
@@ -4731,6 +4733,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             typespec_found = 1;
             break;
         case TOK_REGISTER:
+        case TOK_KATAXVRHTHS:
         case TOK_AUTO:
         case TOK_RESTRICT1:
         case TOK_RESTRICT2:
@@ -4738,6 +4741,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             next();
             break;
         case TOK_UNSIGNED:
+        case TOK_MHPROSHMASMENOS:
             if ((t & (VT_DEFSIGN|VT_UNSIGNED)) == VT_DEFSIGN)
                 tcc_error("signed and unsigned modifier");
             t |= VT_DEFSIGN | VT_UNSIGNED;

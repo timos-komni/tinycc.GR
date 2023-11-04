@@ -84,12 +84,34 @@
      DEF(TOK_GIA, "για") // for
      //DEF(TOK_EXTERN, "extern") // extern
      DEF(TOK_STATIKO, "στατικο") // static
-     //DEF(TOK_UNSIGNED, "unsigned") // unsigned
+     DEF(TOK_MHPROSHMASMENOS, "μηπροσημασμενος") // unsigned
      //DEF(TOK_GOTO, "goto") // goto
      DEF(TOK_KANV, "κανε") // do
      DEF(TOK_SYNEXISE, "συνεχισε") // continue
      //DEF(TOK_SWITCH, "switch") // switch
      DEF(TOK_PERIPTVSH, "περιπτωση") // case
+
+     //DEF(TOK__Atomic, "_Atomic")
+     //DEF(TOK_CONST1, "const")
+     //DEF(TOK_CONST2, "__const") /* gcc keyword */
+     //DEF(TOK_CONST3, "__const__") /* gcc keyword */
+     //DEF(TOK_VOLATILE1, "volatile")
+     //DEF(TOK_VOLATILE2, "__volatile") /* gcc keyword */
+     //DEF(TOK_VOLATILE3, "__volatile__") /* gcc keyword */
+     DEF(TOK_MAKRYS, "μακρυς")
+     DEF(TOK_KATAXVRHTHS, "καταχωρητης")
+     DEF(TOK_PROSHMASMENOS1, "προσημασμενος")
+     //DEF(TOK_SIGNED2, "__signed") /* gcc keyword */
+     //DEF(TOK_SIGNED3, "__signed__") /* gcc keyword */
+     //DEF(TOK_AUTO, "auto")
+     //DEF(TOK_INLINE1, "inline")
+     //DEF(TOK_INLINE2, "__inline") /* gcc keyword */
+     //DEF(TOK_INLINE3, "__inline__") /* gcc keyword */
+     //DEF(TOK_RESTRICT1, "restrict")
+     //DEF(TOK_RESTRICT2, "__restrict")
+     //DEF(TOK_RESTRICT3, "__restrict__")
+     //DEF(TOK_EXTENSION, "__extension__") /* gcc keyword */
+     //DEF(TOK_THREAD_LOCAL, "_Thread_local") /* C11 thread-local storage */
 
 /*********************************************************************/
 /* the following are not keywords. They are included to ease parsing */
