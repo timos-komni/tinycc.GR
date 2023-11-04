@@ -4,5 +4,5 @@
 ακεραιος main()
 {
     printf("Hello World\n");
-    return 0;
+    επεστρεψε 0;
 }

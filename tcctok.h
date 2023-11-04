@@ -91,27 +91,27 @@
      //DEF(TOK_SWITCH, "switch") // switch
      DEF(TOK_PERIPTVSH, "περιπτωση") // case
 
-     //DEF(TOK__Atomic, "_Atomic")
-     //DEF(TOK_CONST1, "const")
-     //DEF(TOK_CONST2, "__const") /* gcc keyword */
-     //DEF(TOK_CONST3, "__const__") /* gcc keyword */
-     //DEF(TOK_VOLATILE1, "volatile")
-     //DEF(TOK_VOLATILE2, "__volatile") /* gcc keyword */
-     //DEF(TOK_VOLATILE3, "__volatile__") /* gcc keyword */
-     DEF(TOK_MAKRYS, "μακρυς")
-     DEF(TOK_KATAXVRHTHS, "καταχωρητης")
-     DEF(TOK_PROSHMASMENOS1, "προσημασμενος")
-     //DEF(TOK_SIGNED2, "__signed") /* gcc keyword */
-     //DEF(TOK_SIGNED3, "__signed__") /* gcc keyword */
-     //DEF(TOK_AUTO, "auto")
-     //DEF(TOK_INLINE1, "inline")
-     //DEF(TOK_INLINE2, "__inline") /* gcc keyword */
-     //DEF(TOK_INLINE3, "__inline__") /* gcc keyword */
-     //DEF(TOK_RESTRICT1, "restrict")
-     //DEF(TOK_RESTRICT2, "__restrict")
-     //DEF(TOK_RESTRICT3, "__restrict__")
-     //DEF(TOK_EXTENSION, "__extension__") /* gcc keyword */
-     //DEF(TOK_THREAD_LOCAL, "_Thread_local") /* C11 thread-local storage */
+     //DEF(TOK__Atomic, "_Atomic") // _Atomic
+     //DEF(TOK_CONST1, "const") // const
+     //DEF(TOK_CONST2, "__const") /* gcc keyword */ // __const
+     //DEF(TOK_CONST3, "__const__") /* gcc keyword */ // __const__
+     //DEF(TOK_VOLATILE1, "volatile") // volatile
+     //DEF(TOK_VOLATILE2, "__volatile") /* gcc keyword */ // __volatile
+     //DEF(TOK_VOLATILE3, "__volatile__") /* gcc keyword */ // __volatile__
+     DEF(TOK_MAKRYS, "μακρυς") // long
+     DEF(TOK_KATAXVRHTHS, "καταχωρητης") // register
+     DEF(TOK_PROSHMASMENOS1, "προσημασμενος") // signed
+     //DEF(TOK_SIGNED2, "__signed") /* gcc keyword */ // __signed
+     //DEF(TOK_SIGNED3, "__signed__") /* gcc keyword */ // __signed__
+     //DEF(TOK_AUTO, "auto") // auto
+     //DEF(TOK_INLINE1, "inline") // inline
+     //DEF(TOK_INLINE2, "__inline") /* gcc keyword */ // __inline
+     //DEF(TOK_INLINE3, "__inline__") /* gcc keyword */ // __inline__
+     //DEF(TOK_RESTRICT1, "restrict") // restrict
+     //DEF(TOK_RESTRICT2, "__restrict") // __restrict
+     //DEF(TOK_RESTRICT3, "__restrict__") // __restrict__
+     //DEF(TOK_EXTENSION, "__extension__") /* gcc keyword */ __extension__
+     //DEF(TOK_THREAD_LOCAL, "_Thread_local") /* C11 thread-local storage */ // _Thread_local
 
 /*********************************************************************/
 /* the following are not keywords. They are included to ease parsing */
