@@ -81,7 +81,7 @@
      //DEF(TOK_ENV, "ενω") // while
      DEF(TOK_DIEKOCE, "διεκοψε") // break
      DEF(TOK_EPESTRECE, "επεστρεψε") // return
-     DEF(TOK_GIA, "ΓΙΑ") // for
+     DEF(TOK_GIA, "για") // for
      //DEF(TOK_EXTERN, "extern") // extern
      DEF(TOK_STATIKO, "στατικο") // static
      //DEF(TOK_UNSIGNED, "unsigned") // unsigned
