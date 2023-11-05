@@ -113,6 +113,38 @@
      //DEF(TOK_EXTENSION, "__extension__") /* gcc keyword */ __extension__
      //DEF(TOK_THREAD_LOCAL, "_Thread_local") /* C11 thread-local storage */ // _Thread_local
 
+     //DEF(TOK_GENERIC, "_Generic") // _Generic
+     //DEF(TOK_STATIC_ASSERT, "_Static_assert") // _Static_assert
+
+     //DEF(TOK_FLOAT, "float") // float
+     //DEF(TOK_DOUBLE, "double") // double
+     //DEF(TOK_BOOL, "_Bool") // _Bool
+     //DEF(TOK_COMPLEX, "_Complex") // _Complex
+     DEF(TOK_KONTOS, "κοντος") // short
+     DEF(TOK_DOMH, "δομη") // struct
+     DEF(TOK_ENVSH, "ενωση") // union
+     //DEF(TOK_TYPEDEF, "typedef") // typedef
+     DEF(TOK_PROKAUORISMENO, "προκαθορισμενο") // default
+     DEF(TOK_APARIUMHSH, "απαριθμηση") // enum
+     DEF(TOK_MEGEUOSTOY, "μεγεθοςτου") // sizeof
+     //DEF(TOK_ATTRIBUTE1, "__attribute") // __attribute
+     //DEF(TOK_ATTRIBUTE2, "__attribute__") // __attribute__
+     //DEF(TOK_ALIGNOF1, "__alignof") // __alignof
+     //DEF(TOK_ALIGNOF2, "__alignof__") // __alignof__
+     //DEF(TOK_ALIGNOF3, "_Alignof") // _Alignof
+     //DEF(TOK_ALIGNAS, "_Alignas") // _Alignas
+     //DEF(TOK_TYPEOF1, "typeof") // typeof
+     //DEF(TOK_TYPEOF2, "__typeof") // __typeof
+     //DEF(TOK_TYPEOF3, "__typeof__") // __typeof__
+     //DEF(TOK_LABEL, "__label__") // __label__
+     //DEF(TOK_ASM1, "asm") // asm
+     //DEF(TOK_ASM2, "__asm") // __asm
+     //DEF(TOK_ASM3, "__asm__") // __asm__
+
+#ifdef TCC_TARGET_ARM64
+     //DEF(TOK_UINT128, "__uint128_t")
+#endif
+
 /*********************************************************************/
 /* the following are not keywords. They are included to ease parsing */
 /* preprocessor only */

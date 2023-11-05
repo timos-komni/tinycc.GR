@@ -4615,6 +4615,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             u = VT_VOID;
             goto basic_type;
         case TOK_SHORT:
+        case TOK_KONTOS:
             u = VT_SHORT;
             goto basic_type;
         case TOK_INT:
@@ -4679,15 +4680,18 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
             next();
             break;
         case TOK_ENUM:
+        case TOK_APARIUMHSH:
             struct_decl(&type1, VT_ENUM);
         basic_type2:
             u = type1.t;
             type->ref = type1.ref;
             goto basic_type1;
         case TOK_STRUCT:
+        case TOK_DOMH:
             struct_decl(&type1, VT_STRUCT);
             goto basic_type2;
         case TOK_UNION:
+        case TOK_ENVSH:
             struct_decl(&type1, VT_UNION);
             goto basic_type2;
 
@@ -5634,6 +5638,7 @@ ST_FUNC void unary(void)
 	}
         break;
     case TOK_SIZEOF:
+    case TOK_MEGEUOSTOY:
     case TOK_ALIGNOF1:
     case TOK_ALIGNOF2:
     case TOK_ALIGNOF3:
@@ -5641,7 +5646,7 @@ ST_FUNC void unary(void)
         next();
         in_sizeof++;
         expr_type(&type, unary); /* Perform a in_sizeof = 0; */
-        if (t == TOK_SIZEOF) {
+        if (t == TOK_SIZEOF || t == TOK_MEGEUOSTOY) {
             vpush_type_size(&type, &align);
             gen_cast_s(VT_SIZE_T);
         } else {
@@ -5894,7 +5899,7 @@ ST_FUNC void unary(void)
         for (;;) {
 	    learn = 0;
 	    skip(',');
-	    if (tok == TOK_DEFAULT) {
+	    if (tok == TOK_DEFAULT || tok == TOK_PROKAUORISMENO) {
 		if (has_default)
 		    tcc_error("too many 'default'");
 		has_default = 1;
@@ -7182,7 +7187,7 @@ again:
         is_expr = 0;
         goto block_after_label;
 
-    } else if (t == TOK_DEFAULT) {
+    } else if (t == TOK_DEFAULT || t == TOK_PROKAUORISMENO) {
         if (!cur_switch)
             expect("switch");
         if (cur_switch->def_sym)
