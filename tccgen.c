@@ -4755,6 +4755,7 @@ static int parse_btype(CType *type, AttributeDef *ad, int ignore_label)
 
             /* storage */
         case TOK_EXTERN:
+        case TOK_EJVTERIKO:
             g = VT_EXTERN;
             goto storage;
         case TOK_STATIC:
@@ -7197,7 +7198,7 @@ again:
         is_expr = 0;
         goto block_after_label;
 
-    } else if (t == TOK_GOTO) {
+    } else if (t == TOK_GOTO || t == TOK_PHGAINESE) {
         vla_restore(cur_scope->vla.locorig);
         if (tok == '*' && gnu_ext) {
             /* computed goto */

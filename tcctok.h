@@ -82,10 +82,10 @@
      DEF(TOK_DIEKOCE, "διεκοψε") // break
      DEF(TOK_EPESTRECE, "επεστρεψε") // return
      DEF(TOK_GIA, "για") // for
-     //DEF(TOK_EXTERN, "extern") // extern
+     DEF(TOK_EJVTERIKO, "εξωτερικο") // extern
      DEF(TOK_STATIKO, "στατικο") // static
      DEF(TOK_MHPROSHMASMENOS, "μηπροσημασμενος") // unsigned
-     //DEF(TOK_GOTO, "goto") // goto
+     DEF(TOK_PHGAINESE, "πηγαινεσε") // goto
      DEF(TOK_KANV, "κανε") // do
      DEF(TOK_SYNEXISE, "συνεχισε") // continue
      //DEF(TOK_SWITCH, "switch") // switch
